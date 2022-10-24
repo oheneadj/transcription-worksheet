@@ -3,6 +3,11 @@ h2 {
   font-size: 3em;
 }
 
+audio {
+  width: 200px;
+  border-radius: 4px;
+}
+
 /* Compenet Classes */
 .alertBox {
   padding: 10px;
