@@ -98,8 +98,8 @@ function checkStreamAnswer(alert, select) {
     alert.innerText = "Incorrect. This word would rhyme with swim.";
   } else if (select.value == "[ˈstɹim]") {
     alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
     alert.innerText = "This is Correct";
     allAnswersCorrect();
   }
