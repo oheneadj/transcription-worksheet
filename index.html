@@ -202,14 +202,11 @@
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="stream-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -246,14 +243,10 @@
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="went-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty.
                         </div>
                       </div>
                     </div>
@@ -290,18 +283,18 @@
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="rouge-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty
                         </div>
                         <div class="row">
                           <div class="col-10">
                             <a href="./page2.html">
-                              <button class="btn mt-3 btn-danger">
+                              <button
+                                id="pageOneBtn"
+                                class="btn mt-3 btn-danger d-none"
+                              >
                                 Go go to Practice 2
                               </button></a
                             >
