@@ -11,8 +11,6 @@
     <title>Phonetic Transcription Exercises - Home</title>
     <!-- CSS files -->
     <link href="./dist/css/tabler.min.css" rel="stylesheet" />
-    <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
-    <link href="./dist/css/tabler-payments.min.css" rel="stylesheet" />
     <link href="./dist/css/demo.min.css" rel="stylesheet" />
     <link href="./dist/css/main.css" rel="stylesheet" />
     <style>
@@ -29,7 +27,6 @@
     </style>
   </head>
   <body>
-    <script src="./dist/js/demo-theme.min.js"></script>
     <div class="page">
       <!-- Navbar -->
       <header class="navbar navbar-expand-md navbar-light d-print-none">
@@ -164,14 +161,11 @@
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="pluck-alert"
+                          class="alertBox mt-3 d-none alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
