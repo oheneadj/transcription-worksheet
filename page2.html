@@ -11,8 +11,6 @@
     <title>Page 2 - Phonetic Transcription Exercises</title>
     <!-- CSS files -->
     <link href="./dist/css/tabler.min.css" rel="stylesheet" />
-    <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
-    <link href="./dist/css/tabler-payments.min.css" rel="stylesheet" />
     <link href="./dist/css/demo.min.css" rel="stylesheet" />
     <link href="./dist/css/main.css" rel="stylesheet" />
     <style>
@@ -116,7 +114,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="how-select" class="form-select">
                             <option selected>(Select)</option>
                             <option>[ˈhaw]</option>
                             <option>[ˈhau]</option>
@@ -125,20 +123,18 @@
                           </select>
                         </div>
                         <button
+                          id="how-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
+                          id="alert-how"
                           class="alertBox mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -167,7 +163,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="honor-select" class="form-select">
                             <option selected>(Select)</option>
                             <option>[ˈhanɹ̩]</option>
                             <option>[ˈonɹ̩]</option>
@@ -176,20 +172,18 @@
                           </select>
                         </div>
                         <button
+                          id="honor-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
+                          id="honor-alert"
                           class="alertBox mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -218,7 +212,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="attract-select" class="form-select">
                             <option selected>(Select)</option>
                             <option>[̩aˈtrækt]</option>
                             <option>[əˈtɹækt]</option>
@@ -227,20 +221,18 @@
                           </select>
                         </div>
                         <button
+                          id="attract-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
+                          id="attract-alert"
                           class="alertBox mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -269,7 +261,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="mood-select" class="form-select">
                             <option selected>(Select)</option>
                             <option>[ˈmood]</option>
                             <option>[ˈmude]</option>
@@ -278,20 +270,18 @@
                           </select>
                         </div>
                         <button
+                          id="mood-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
+                          id="mood-alert"
                           class="alertBox mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -320,7 +310,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="should-select" class="form-select">
                             <option selected>(Select)</option>
                             <option>[ˈʃʊd]</option>
                             <option>[ˈshʊd]</option>
@@ -329,20 +319,18 @@
                           </select>
                         </div>
                         <button
+                          id="should-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
+                          id="should-alert"
                           class="alertBox mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                         <div class="row">
                           <div class="col-3">
@@ -415,6 +403,6 @@
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js" defer></script>
     <script src="./dist/js/demo.min.js" defer></script>
-    <script src="./dist/js/app.js" defer></script>
+    <script src="./dist/js/page-two.js" defer></script>
   </body>
 </html>
