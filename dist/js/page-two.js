@@ -27,27 +27,26 @@ const shouldAlert = document.getElementById("should-alert");
 function checkhowAnswer(alert, select) {
   if (select.value == "[ˈhaw]") {
     alert.classList.remove("d-none");
-    alert.classList.remove("alert-danger");
-    alert.classList.add("alert-success");
-    alert.innerText = "This is corect";
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. This word does not have a fully articulated [w].";
     allAnswersCorrect();
   } else if (select.value == "[ˈhau]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The English rhotic approximant is represented by turned r.";
+    alert.innerText = "Incorrect. The final vowel is not quite so high.";
   } else if (select.value == "[ˈhaʊ]") {
     alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. In IPA, any sequence of vowels indicates a diphthong.";
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText = "This is correct";
   } else if (select.value == "[ˈhow]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. That is crab not how.";
+    alert.innerText = "Incorrect. Don't let English spelling fool you!";
   }
 }
 
@@ -57,13 +56,14 @@ function checkhonorAnswer(alert, select) {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = 'Incorrect. That transcription gives you "pluke"';
+    alert.innerText =
+      "Incorrect. Listen carefully: there is no pronunciation of [h].";
   } else if (select.value == "[ˈonɹ̩]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. In English, schwa doesn't occur in stressed syllables";
+      "Incorrect. The vowel isn't pronounced as [o] as in only.";
   } else if (select.value == "[ˈanɹ̩]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
@@ -74,7 +74,8 @@ function checkhonorAnswer(alert, select) {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There is no IPA [c] in English";
+    alert.innerText =
+      "Incorrect. You are right that there is no [h], but check the vowels and the approximant.";
   }
 }
 
@@ -84,12 +85,11 @@ function checkattractAnswer(alert, select) {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The English rhotic approximant is represented by turned r.";
+    alert.innerText = "Incorrect. The first vowel is n ot low and central.";
   } else if (select.value == "[əˈtɹækt]") {
     alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
     alert.innerText = "Incorrect. This transcription lacks a stress mark..";
   } else if (select.value == "[̩ʌˈtrækt]") {
     alert.classList.remove("d-none");
@@ -190,9 +190,9 @@ shouldBtn.addEventListener("click", () => {
 // Utility Function
 function allAnswersCorrect() {
   if (
-    howSelect.value == "[ˈgɹæb]" &&
-    honorSelect.value == "[ˈplʌk]" &&
-    attractSelect.value == "[ˈstɹim]" &&
+    howSelect.value == "[ˈhaʊ]" &&
+    honorSelect.value == "[ˈanɹ̩]" &&
+    attractSelect.value == "[əˈtɹækt]" &&
     shouldSelect.vale == "[ˈɹuʒ]" &&
     (moodSelect.value == "[ˈwɛnt]" || moodSelect.value == "[ˈwɪnt]")
   ) {
