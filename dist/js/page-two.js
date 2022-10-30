@@ -31,7 +31,6 @@ function checkhowAnswer(alert, select) {
     alert.classList.add("alert-danger");
     alert.innerText =
       "Incorrect. This word does not have a fully articulated [w].";
-    allAnswersCorrect();
   } else if (select.value == "[ˈhau]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
@@ -42,6 +41,7 @@ function checkhowAnswer(alert, select) {
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
+    allAnswersCorrect();
   } else if (select.value == "[ˈhow]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
@@ -90,18 +90,19 @@ function checkattractAnswer(alert, select) {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
-    alert.innerText = "Incorrect. This transcription lacks a stress mark..";
+    alert.innerText = "This is correct";
+    allAnswersCorrect();
   } else if (select.value == "[̩ʌˈtrækt]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This word would rhyme with swim.";
+    alert.innerText =
+      "Incorrect. [ ʌ ] never occurs in an unstressed syllable.";
   } else if (select.value == "[̩əˈttræct]") {
     alert.classList.remove("d-none");
-    alert.classList.remove("alert-danger");
-    alert.classList.add("alert-success");
-    alert.innerText = "This is Correct";
-    allAnswersCorrect();
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. There is no long [t] or [c] in English.";
   }
 }
 
@@ -111,25 +112,23 @@ function checkmoodAnswer(alert, select) {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This would rhyme with runt.";
+    alert.innerText = "Incorrect. This would have [o] as in mode, but longer.";
   } else if (select.value == "[ˈmude]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = 'Incorrect. There is no "silent e" in IPA.';
+  } else if (select.value == "[ˈmʌd]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. This word is mud.";
+  } else if (select.value == "[ˈmud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈmʌd]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-danger");
-    alert.classList.add("alert-success");
-    alert.innerText =
-      "Correct. This speaker demonstrates a phenomenon called 'nasal raising' where vowels raise before a nasal sound. However, many Americans pronounce this word with the vowel [ɛ]";
-    allAnswersCorrect();
-  } else if (select.value == "[ˈmud]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This would rhyme with , paint.";
   }
 }
 
@@ -137,27 +136,27 @@ function checkmoodAnswer(alert, select) {
 function checkshouldAnswer(alert, select) {
   if (select.value == "[ˈʃʊd]") {
     alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. IPA [j] indicates a palatal approximant written in English as y.";
-  } else if (select.value == "[ˈshʊd]") {
-    alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
+  } else if (select.value == "[ˈshʊd]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. This word does not begin with the sound [s] followed by the sound [h].";
   } else if (select.value == "[ˈʃood]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. The English rhotic approximant is represented by turned r.";
+      "Incorrect. This would give you showed but with a longer vowel.";
   } else if (select.value == "[ˈʃʊld]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There are never silent letters in IPA.";
+    alert.innerText = "Incorrect. There is no phonetic [l] in this word.";
   }
 }
 
@@ -193,8 +192,8 @@ function allAnswersCorrect() {
     howSelect.value == "[ˈhaʊ]" &&
     honorSelect.value == "[ˈanɹ̩]" &&
     attractSelect.value == "[əˈtɹækt]" &&
-    shouldSelect.vale == "[ˈɹuʒ]" &&
-    (moodSelect.value == "[ˈwɛnt]" || moodSelect.value == "[ˈwɪnt]")
+    shouldSelect.value == "[ˈʃʊd]" &&
+    moodSelect.value == "[ˈmud]"
   ) {
     pageTwoBtn.classList.remove("d-none");
   }
