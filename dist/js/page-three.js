@@ -6,7 +6,7 @@ const rottenBtn = document.getElementById("rotten-btn");
 const yawnedBtn = document.getElementById("yawned-btn");
 const phonesBtn = document.getElementById("phones-btn");
 const includeBtn = document.getElementById("include-btn");
-const pageTwoBtn = document.getElementById("pageTwoBtn");
+const pageThreeBtn = document.getElementById("pageThreeBtn");
 
 //Select inputs
 const spikedSelect = document.getElementById("spiked-select");
@@ -25,138 +25,140 @@ const includeAlert = document.getElementById("include-alert");
 //Functions to check answers
 //spiked
 function checkspikedAnswer(alert, select) {
-  if (select.value == "[ˈhaw]") {
+  if (select.value == "[ˈspaɪked]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This word does not have a fully articulated [w].";
-  } else if (select.value == "[ˈhau]") {
+      "Incorrect. Phonetically, this word does not end in [ed].";
+  } else if (select.value == "[ˈspaikt]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. The final vowel is not quite so high.";
-  } else if (select.value == "[ˈhaʊ]") {
+    alert.innerText = "Incorrect. The diphthong does not end quite so high.";
+  } else if (select.value == "[ˈspikt]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. This would give you speaked.";
+  } else if (select.value == "[ˈspaɪkt]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈspiked]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. Don't let English spelling fool you!";
   }
 }
 
 //rotten
 function checkrottenAnswer(alert, select) {
-  if (select.value == "[ˈhanɹ̩]") {
+  if (select.value == "[ɹatn̩]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. Listen carefully: there is no pronunciation of [h].";
-  } else if (select.value == "[ˈonɹ̩]") {
+      "Incorrect. If you listen carefully, you will hear that there is no [t], just glottal stop followed by [n].";
+  } else if (select.value == "[ɹoʔn̩]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. The vowel isn't pronounced as [o] as in only.";
-  } else if (select.value == "[ˈanɹ̩]") {
+      "Incorrect. Don't let the spelling get in they way of how you transcribe the vowels.";
+  } else if (select.value == "[ˈɹaʔn̩]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈanor̩]") {
+  } else if (select.value == "ɹotten") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. You are right that there is no [h], but check the vowels and the approximant.";
+    alert.innerText = "Incorrect. This is orthogrpahic, not phonetic.";
   }
 }
 
 //yawned
 function checkyawnedAnswer(alert, select) {
-  if (select.value == "[̩aˈtrækt]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. The first vowel is n ot low and central.";
-  } else if (select.value == "[əˈtɹækt]") {
+  if (select.value == "[ˈjand]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[̩ʌˈtrækt]") {
+  } else if (select.value == "[ˈyand]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. [ ʌ ] never occurs in an unstressed syllable.";
-  } else if (select.value == "[̩əˈttræct]") {
+      "Incorrect. Double check how we transcribe the palatal approximant.";
+  } else if (select.value == "[ˈyawnd]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There is no long [t] or [c] in English.";
+    alert.innerText =
+      "Incorrect. The first letter doesn't represent a palatal glide, and this word does not contain a bilabial approximant.";
+  } else if (select.value == "[ˈjaned]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. There is no silent e in IPA.";
   }
 }
 
 //phones
 function checkphonesAnswer(alert, select) {
-  if (select.value == "[ˈphones]") {
+  if (select.value == "[ˈfons]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This would have [o] as in mode, but longer.";
-  } else if (select.value == "[ˈmude]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = 'Incorrect. There is no "silent e" in IPA.';
-  } else if (select.value == "[ˈmʌd]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This word is mud.";
-  } else if (select.value == "[ˈmud]") {
+    alert.innerText = "Incorrect. Listen to the voicing of the final sound.";
+  } else if (select.value == "[ˈfonz]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
+  } else if (select.value == "[ˈphonz]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. This word doesn't start with a bilabial stop.";
+  } else if (select.value == "[ˈfonez]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. There is no silent e in IPA.";
   }
 }
 
 //include
 function checkincludeAnswer(alert, select) {
-  if (select.value == "[ˈʃʊd]") {
+  if (select.value == "[ɪnˈklud]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect.The nasal consonant assimilates in place of articulation to the following stop.";
+  } else if (select.value == "[ɪŋˈklud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈshʊd]") {
+  } else if (select.value == "[iŋˈklud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This word does not begin with the sound [s] followed by the sound [h].";
-  } else if (select.value == "[ˈʃood]") {
+      "Incorrect. The first vowel is not pronounced as high and front as [i].";
+  } else if (select.value == "[ɪŋˈclud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This would give you sspikeded but with a longer vowel.";
-  } else if (select.value == "[ˈʃʊld]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There is no phonetic [l] in this word.";
+      "Incorrect. English does not use the sound represented by IPA [c].";
   }
 }
 
@@ -189,13 +191,13 @@ includeBtn.addEventListener("click", () => {
 // Utility Function
 function allAnswersCorrect() {
   if (
-    spikedSelect.value == "[ˈhaʊ]" &&
-    rottenSelect.value == "[ˈanɹ̩]" &&
-    yawnedSelect.value == "[əˈtɹækt]" &&
-    includeSelect.value == "[ˈʃʊd]" &&
-    phonesSelect.value == "[ˈmud]"
+    spikedSelect.value == "[ˈspaɪkt]" &&
+    rottenSelect.value == "[ˈɹaʔn̩]" &&
+    yawnedSelect.value == "[ˈjand]" &&
+    includeSelect.value == "[ɪŋˈklud]" &&
+    phonesSelect.value == "[ˈfonz]"
   ) {
-    pageTwoBtn.classList.remove("d-none");
+    pageThreeBtn.classList.remove("d-none");
   }
 }
 

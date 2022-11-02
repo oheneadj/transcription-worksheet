@@ -11,8 +11,6 @@
     <title>Page 3 - Phonetic Transcription Exercises</title>
     <!-- CSS files -->
     <link href="./dist/css/tabler.min.css" rel="stylesheet" />
-    <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
-    <link href="./dist/css/tabler-payments.min.css" rel="stylesheet" />
     <link href="./dist/css/demo.min.css" rel="stylesheet" />
     <link href="./dist/css/main.css" rel="stylesheet" />
     <style>
@@ -29,7 +27,6 @@
     </style>
   </head>
   <body>
-    <script src="./dist/js/demo-theme.min.js"></script>
     <div class="page">
       <!-- Navbar -->
       <header class="navbar navbar-expand-md navbar-light d-print-none">
@@ -118,9 +115,10 @@
                           <div class="form-label">Select</div>
                           <select id="spiked-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option value="2">Two</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option>[ˈspaɪked]</option>
+                            <option>[ˈspaikt]</option>
+                            <option>[ˈspikt]</option>
+                            <option>[ˈspaɪkt]</option>
                           </select>
                         </div>
                         <button
@@ -132,7 +130,7 @@
                         </button>
                         <div
                           id="spiked-alert"
-                          class="alertBox mt-3 alert-important alert-success"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
                           there is no reasons for you to abser me
@@ -166,9 +164,10 @@
                           <div class="form-label">Select</div>
                           <select id="rotten-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option value="2">Two</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option>[ɹatn̩]</option>
+                            <option>[ɹoʔn̩]</option>
+                            <option>[ˈɹaʔn̩]</option>
+                            <option>ɹotten</option>
                           </select>
                         </div>
                         <button
@@ -180,7 +179,7 @@
                         </button>
                         <div
                           id="rotten-alert"
-                          class="alertBox mt-3 alert-important alert-success"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
                           there is no reasons for you to abser me
@@ -214,9 +213,10 @@
                           <div class="form-label">Select</div>
                           <select id="yawned-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option value="2">Two</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option>[ˈjand]</option>
+                            <option>[ˈyand]</option>
+                            <option>[ˈyawnd]</option>
+                            <option>[ˈjaned]</option>
                           </select>
                         </div>
                         <button
@@ -228,7 +228,7 @@
                         </button>
                         <div
                           id="yawned-alert"
-                          class="alertBox mt-3 alert-important alert-success"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
                           there is no reasons for you to abser me
@@ -262,9 +262,10 @@
                           <div class="form-label">Select</div>
                           <select id="phones-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option value="2">Two</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option>[ˈfons]</option>
+                            <option>[ˈfonz]</option>
+                            <option>[ˈphonz]</option>
+                            <option>[ˈfonez]</option>
                           </select>
                         </div>
                         <button
@@ -276,7 +277,7 @@
                         </button>
                         <div
                           id="phones-alert"
-                          class="alertBox mt-3 alert-important alert-success"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
                           there is no reasons for you to abser me
@@ -310,9 +311,10 @@
                           <div class="form-label">Select</div>
                           <select id="include-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option value="2">Two</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option>[ɪnˈklud]</option>
+                            <option>[ɪŋˈklud]</option>
+                            <option>[iŋˈklud]</option>
+                            <option>[ɪŋˈclud]</option>
                           </select>
                         </div>
                         <button
@@ -324,14 +326,10 @@
                         </button>
                         <div
                           id="include-alert"
-                          class="alertBox mt-3 alert-important alert-success"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                         <div class="row">
                           <div class="col-3">
@@ -343,7 +341,10 @@
                           </div>
                           <div class="col-9">
                             <a href="./page4.html">
-                              <button class="btn mt-3 btn-danger">
+                              <button
+                                id="pageThreeBtn"
+                                class="btn d-none mt-3 btn-danger"
+                              >
                                 Go go to Practice 4
                               </button></a
                             >
@@ -404,6 +405,6 @@
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js" defer></script>
     <script src="./dist/js/demo.min.js" defer></script>
-    <script src="./dist/js/app.js" defer></script>
+    <script src="./dist/js/page-three.js" defer></script>
   </body>
 </html>
