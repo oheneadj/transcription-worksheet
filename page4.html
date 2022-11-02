@@ -116,7 +116,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="breaths-select" class="form-select">
                             <option selected>(Select)</option>
                             <option value="2">Two</option>
                             <option value="2">Two</option>
@@ -124,20 +124,18 @@
                           </select>
                         </div>
                         <button
+                          id="breaths-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="breaths-id"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -166,7 +164,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="xray-select" class="form-select">
                             <option selected>(Select)</option>
                             <option value="2">Two</option>
                             <option value="2">Two</option>
@@ -174,20 +172,18 @@
                           </select>
                         </div>
                         <button
+                          id="xray-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="xray-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -216,7 +212,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="coughed-select" class="form-select">
                             <option selected>(Select)</option>
                             <option value="2">Two</option>
                             <option value="2">Two</option>
@@ -224,20 +220,18 @@
                           </select>
                         </div>
                         <button
+                          id="coughed-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="coughed-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -266,7 +260,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="chandalier-select" class="form-select">
                             <option selected>(Select)</option>
                             <option value="2">Two</option>
                             <option value="2">Two</option>
@@ -274,20 +268,18 @@
                           </select>
                         </div>
                         <button
+                          id="chandalier-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="chandalier-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                       </div>
                     </div>
@@ -316,7 +308,7 @@
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select class="form-select">
+                          <select id="through-select" class="form-select">
                             <option selected>(Select)</option>
                             <option value="2">Two</option>
                             <option value="2">Two</option>
@@ -324,20 +316,18 @@
                           </select>
                         </div>
                         <button
+                          id="through-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          class="alertBox mt-3 alert-important alert-success"
+                          id="through-alert"
+                          class="alertBox d-none mt-3 alert-important alert-success"
                         >
-                          <div class="d-flex">
-                            <div>
-                              Your answer is not correct because it is faulty
-                              and there is no reasons for you to abser me
-                            </div>
-                          </div>
+                          Your answer is not correct because it is faulty and
+                          there is no reasons for you to abser me
                         </div>
                         <div class="row">
                           <div class="col-3">
@@ -349,7 +339,10 @@
                           </div>
                           <div class="col-9">
                             <a href="./page5.html">
-                              <button class="btn mt-3 btn-danger">
+                              <button
+                                id="pageFourBtn"
+                                class="btn d-none mt-3 btn-danger"
+                              >
                                 Go go to Practice 5
                               </button></a
                             >
