@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Phonetic Transcription Exercises - Home</title>
+    <title>Page 5 - Phonetic Transcription Exercises</title>
     <!-- CSS files -->
     <link href="./dist/css/tabler.min.css" rel="stylesheet" />
     <link href="./dist/css/demo.min.css" rel="stylesheet" />
@@ -44,7 +44,7 @@
           >
             Phonetic Transcription Exercise
           </h1>
-          <div class="navbar-nav flex-row order-md-last">
+          <div class="navbar allAnswersCorrect();-nav flex-row order-md-last">
             <div class="nav-item d-none d-md-flex me-3">
               <div class="btn-list"></div>
             </div>
@@ -68,8 +68,8 @@
                 <div class="card">
                   <div class="card-body text-center">
                     <ul class="pagination">
-                      <li class="page-item active">
-                        <a class="page-link px-2" href="#">Page 1</a>
+                      <li class="page-item">
+                        <a class="page-link disabled" href="#">Page 1</a>
                       </li>
                       <li class="page-item">
                         <a class="page-link disabled" href="#">Page 2</a>
@@ -80,11 +80,11 @@
                       <li class="page-item">
                         <a class="page-link disabled" href="#">Page 4</a>
                       </li>
-                      <li class="page-item active">
+                      <li class="page-item">
                         <a class="page-link disabled" href="#">Page 5</a>
                       </li>
                       <li class="page-item active">
-                        <a class="page-link disabled" href="#">Page 6</a>
+                        <a class="page-link px-2" href="#">Page 6</a>
                       </li>
                     </ul>
                   </div>
@@ -93,6 +93,7 @@
               <div class="col-md-3"></div>
             </div>
             <!-- Pagination Ends Here -->
+
             <!-- Cards -->
             <div class="row row-cards mb-4">
               <div class="col-md-12">
@@ -101,28 +102,37 @@
                     <div class="row px-4 py-2">
                       <div class="col-md-8 col-sm-6">
                         <h2 class="bg-light border border-danger p-4">
-                          'blue'
+                          'beauty'
+                          <audio controls width="10">
+                            <source
+                              src="./dist/audio/beauty.mp3"
+                              type="audio/mp3"
+                            />
+
+                            Your browser does not support the audio element.
+                          </audio>
                         </h2>
                       </div>
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select id="blue-select" class="form-select">
+                          <select id="beauty-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option>[Bue]</option>
-                            <option>[Blu]</option>
-                            <option>[Blʊ]</option>
+                            <option>[ˈbuɾi]</option>
+                            <option>[ˈbjuɾi]</option>
+                            <option>[ˈbyuti]</option>
+                            <option>[ˈbjuty]</option>
                           </select>
                         </div>
                         <button
-                          id="blue-btn"
+                          id="beauty-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          id="blue-alert"
+                          id="beauty-alert"
                           class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
@@ -141,28 +151,37 @@
                     <div class="row px-4 py-2">
                       <div class="col-md-8 col-sm-6">
                         <h2 class="bg-light border border-danger p-4">
-                          'special'
+                          'sure'
+                          <audio controls width="10">
+                            <source
+                              src="./dist/audio/sure.mp3"
+                              type="audio/mp3"
+                            />
+
+                            Your browser does not support the audio element.
+                          </audio>
                         </h2>
                       </div>
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select id="special-select" class="form-select">
+                          <select id="sure-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option>[spəʃɛl]</option>
-                            <option>[spəʒl]</option>
-                            <option>[ˈspɛʃəl]</option>
+                            <option>[ˈʃuɹ]</option>
+                            <option>[ˈshɹ̩]</option>
+                            <option>[ˈʃɹ̩]</option>
+                            <option>[ˈʃɹ]</option>
                           </select>
                         </div>
                         <button
-                          id="special-btn"
+                          id="sure-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          id="special-alert"
+                          id="sure-alert"
                           class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
@@ -181,28 +200,37 @@
                     <div class="row px-4 py-2">
                       <div class="col-md-8 col-sm-6">
                         <h2 class="bg-light border border-danger p-4">
-                          'ugly'
+                          'cello'
+                          <audio controls width="10">
+                            <source
+                              src="./dist/audio/cello.mp3"
+                              type="audio/mp3"
+                            />
+
+                            Your browser does not support the audio element.
+                          </audio>
                         </h2>
                       </div>
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select id="ugly-select" class="form-select">
+                          <select id="cello-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option>[ʊgli]</option>
-                            <option>[ˈʌgli]</option>
-                            <option>[ʊglə]</option>
+                            <option>[ˈchɛlo]</option>
+                            <option>[ˈtʃɛllo]</option>
+                            <option>[ˈcelo]</option>
+                            <option>[ˈtʃɛlo]</option>
                           </select>
                         </div>
                         <button
-                          id="ugly-btn"
+                          id="cello-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          id="ugly-alert"
+                          id="cello-alert"
                           class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
@@ -221,32 +249,51 @@
                     <div class="row px-4 py-2">
                       <div class="col-md-8 col-sm-6">
                         <h2 class="bg-light border border-danger p-4">
-                          'wood'
+                          'gem'
+                          <audio controls width="10">
+                            <source
+                              src="./dist/audio/gem.mp3"
+                              type="audio/mp3"
+                            />
+
+                            Your browser does not support the audio element.
+                          </audio>
                         </h2>
                       </div>
                       <div class="col-md-4 col-sm-6">
                         <div class="mb-2">
                           <div class="form-label">Select</div>
-                          <select id="wood-select" class="form-select">
+                          <select id="gem-select" class="form-select">
                             <option selected>(Select)</option>
-                            <option>[ˈwʊd]</option>
-                            <option>[ˈwud]</option>
-                            <option>[woʊd]</option>
+                            <option>[ˈjɛm]</option>
+                            <option>[ˈdʒɪm]</option>
+                            <option>[ˈgem]</option>
+                            <option>[ˈdʒɛm]</option>
                           </select>
                         </div>
                         <button
-                          id="wood-btn"
+                          id="gem-btn"
                           type="button"
                           class="btn btn-primary btn-md my-2"
                         >
                           Check
                         </button>
                         <div
-                          id="wood-alert"
+                          id="gem-alert"
                           class="alertBox d-none mt-3 alert-important alert-success"
                         >
                           Your answer is not correct because it is faulty and
                           there is no reasons for you to abser me
+                        </div>
+                        <div class="row">
+                          <div class="col-9">
+                            <a href="./page5.html">
+                              <button class="btn mt-3 btn-warning">
+                                Back
+                              </button></a
+                            >
+                          </div>
+                          <div class="col-9"></div>
                         </div>
                       </div>
                     </div>
@@ -255,175 +302,6 @@
               </div>
             </div>
 
-            <div class="row row-cards mb-4">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body p-2">
-                    <div class="row px-4 py-2">
-                      <div class="col-md-8 col-sm-6">
-                        <h2 class="bg-light border border-danger p-4">
-                          'aethestic'
-                        </h2>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="mb-2">
-                          <div class="form-label">Select</div>
-                          <select id="aethestic-select" class="form-select">
-                            <option selected>(Select)</option>
-                            <option>[iːsˈθɛtɪk]</option>
-                            <option>[əˈsθɛtɪk]</option>
-                            <option>[ɛˈsθɛtɪk]</option>
-                          </select>
-                        </div>
-                        <button
-                          id="aethestic-btn"
-                          type="button"
-                          class="btn btn-primary btn-md my-2"
-                        >
-                          Check
-                        </button>
-                        <div
-                          id="aethestic-alert"
-                          class="alertBox mt-3 d-none alert-important alert-success"
-                        >
-                          Your answer is not correct because it is faulty and
-                          there is no reasons for you to abser me
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row row-cards mb-4">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body p-2">
-                    <div class="row px-4 py-2">
-                      <div class="col-md-8 col-sm-6">
-                        <h2 class="bg-light border border-danger p-4">'ago'</h2>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="mb-2">
-                          <div class="form-label">Select</div>
-                          <select id="ago-select" class="form-select">
-                            <option selected>(Select)</option>
-                            <option>[əˈgoʊ]</option>
-                            <option>[əˈgo]</option>
-                            <option>[ɑgoʊ]</option>
-                          </select>
-                        </div>
-                        <button
-                          id="ago-btn"
-                          type="button"
-                          class="btn btn-primary btn-md my-2"
-                        >
-                          Check
-                        </button>
-                        <div
-                          id="ago-alert"
-                          class="alertBox d-none mt-3 alert-important alert-success"
-                        >
-                          Your answer is not correct because it is faulty and
-                          there is no reasons for you to abser me
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row row-cards mb-4">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body p-2">
-                    <div class="row px-4 py-2">
-                      <div class="col-md-8 col-sm-6">
-                        <h2 class="bg-light border border-danger p-4">
-                          'here'
-                        </h2>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="mb-2">
-                          <div class="form-label">Select</div>
-                          <select id="here-select" class="form-select">
-                            <option selected>(Select)</option>
-                            <option>[Hir]</option>
-                            <option>[hɝr]</option>
-                            <option>[hər]</option>
-                          </select>
-                        </div>
-                        <button
-                          id="here-btn"
-                          type="button"
-                          class="btn btn-primary btn-md my-2"
-                        >
-                          Check
-                        </button>
-                        <div
-                          id="here-alert"
-                          class="alertBox d-none mt-3 alert-important alert-success"
-                        >
-                          Your answer is not correct because it is faulty.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row row-cards mb-4">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body p-2">
-                    <div class="row px-4 py-2">
-                      <div class="col-md-8 col-sm-6">
-                        <h2 class="bg-light border border-danger p-4">
-                          'order'
-                        </h2>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="mb-2">
-                          <div class="form-label">Select</div>
-                          <select id="order-select" class="form-select">
-                            <option selected>(Select)</option>
-                            <option>[ɑrder]</option>
-                            <option>[ordɝ]</option>
-                            <option>[ˈɔrdər]</option>
-                          </select>
-                        </div>
-                        <button
-                          id="order-btn"
-                          type="button"
-                          class="btn btn-primary btn-md my-2"
-                        >
-                          Check
-                        </button>
-                        <div
-                          id="order-alert"
-                          class="alertBox d-none mt-3 alert-important alert-success"
-                        >
-                          Your answer is not correct because it is faulty
-                        </div>
-                        <div class="row">
-                          <div class="col-10">
-                            <a href="./page2.html">
-                              <button
-                                id="pageOneBtn"
-                                class="btn mt-3 btn-danger d-none"
-                              >
-                                Go go to Practice 2
-                              </button></a
-                            >
-                          </div>
-                          <div class="col-2"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <!-- Card Ends -->
           </div>
         </div>
@@ -468,9 +346,10 @@
       </footer>
     </div>
 
+    <!-- Libs JS -->
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js" defer></script>
     <script src="./dist/js/demo.min.js" defer></script>
-    <script src="./dist/js/page-one.js" defer></script>
+    <script src="./dist/js/page-six.js" defer></script>
   </body>
 </html>

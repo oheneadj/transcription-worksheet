@@ -245,7 +245,7 @@ function allAnswersCorrect() {
     blueSelect.value == "[Blu]" &&
     specialSelect.value == "[ˈspɛʃəl]" &&
     uglySelect.value == "[ˈʌgli]" &&
-    woodSelect.value == "[wʊd]" &&
+    woodSelect.value == "[ˈwʊd]" &&
     aethesticSelect.value == "[iːsˈθɛtɪk]" &&
     agoSelect.value == "[əˈgoʊ]" &&
     hereSelect.value == "[Hir]" &&

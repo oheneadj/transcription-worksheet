@@ -6,7 +6,7 @@ const honorBtn = document.getElementById("honor-btn");
 const attractBtn = document.getElementById("attract-btn");
 const moodBtn = document.getElementById("mood-btn");
 const shouldBtn = document.getElementById("should-btn");
-const pageTwoBtn = document.getElementById("pageTwoBtn");
+const pageThreeBtn = document.getElementById("pageThreeBtn");
 
 //Select inputs
 const howSelect = document.getElementById("how-select");
@@ -195,7 +195,7 @@ function allAnswersCorrect() {
     shouldSelect.value == "[ˈʃʊd]" &&
     moodSelect.value == "[ˈmud]"
   ) {
-    pageTwoBtn.classList.remove("d-none");
+    pageThreeBtn.classList.remove("d-none");
   }
 }
 

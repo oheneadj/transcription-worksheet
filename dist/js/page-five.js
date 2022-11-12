@@ -6,7 +6,7 @@ const xrayBtn = document.getElementById("xray-btn");
 const coughedBtn = document.getElementById("coughed-btn");
 const chandalierBtn = document.getElementById("chandalier-btn");
 const throughBtn = document.getElementById("through-btn");
-const pageFourBtn = document.getElementById("pageFourBtn");
+const pageFiveBtn = document.getElementById("pageFiveBtn");
 
 //Select inputs
 const breathsSelect = document.getElementById("breaths-select");
@@ -200,7 +200,7 @@ function allAnswersCorrect() {
     throughSelect.value == "[ˈθɹu]" &&
     chandalierSelect.value == "[ʃændəˈliɹ]"
   ) {
-    pageFourBtn.classList.remove("d-none");
+    pageFiveBtn.classList.remove("d-none");
   }
 }
 

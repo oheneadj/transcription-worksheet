@@ -6,7 +6,7 @@ const pluckBtn = document.getElementById("pluck-btn");
 const streamBtn = document.getElementById("stream-btn");
 const wentBtn = document.getElementById("went-btn");
 const rougeBtn = document.getElementById("rouge-btn");
-const pageOneBtn = document.getElementById("pageOneBtn");
+const pageTwoBtn = document.getElementById("pageTwoBtn");
 
 //Select inputs
 const grabSelect = document.getElementById("grab-select");
@@ -196,7 +196,7 @@ function allAnswersCorrect() {
     rougeSelect.value == "[ˈɹuʒ]" &&
     (wentSelect.value == "[ˈwɛnt]" || wentSelect.value == "[ˈwɪnt]")
   ) {
-    pageOneBtn.classList.remove("d-none");
+    pageTwoBtn.classList.remove("d-none");
   }
 }
 

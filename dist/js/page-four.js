@@ -6,7 +6,7 @@ const rottenBtn = document.getElementById("rotten-btn");
 const yawnedBtn = document.getElementById("yawned-btn");
 const phonesBtn = document.getElementById("phones-btn");
 const includeBtn = document.getElementById("include-btn");
-const pageThreeBtn = document.getElementById("pageThreeBtn");
+const pageFourBtn = document.getElementById("pageFourBtn");
 
 //Select inputs
 const spikedSelect = document.getElementById("spiked-select");
@@ -197,7 +197,7 @@ function allAnswersCorrect() {
     includeSelect.value == "[ɪŋˈklud]" &&
     phonesSelect.value == "[ˈfonz]"
   ) {
-    pageThreeBtn.classList.remove("d-none");
+    pageFourBtn.classList.remove("d-none");
   }
 }
 
