@@ -1,162 +1,163 @@
 //Get all ids from pages
 
 //Buttons
-const howBtn = document.getElementById("how-btn");
-const honorBtn = document.getElementById("honor-btn");
-const attractBtn = document.getElementById("attract-btn");
-const moodBtn = document.getElementById("mood-btn");
-const shouldBtn = document.getElementById("should-btn");
-const pageTwoBtn = document.getElementById("pageTwoBtn");
+const grabBtn = document.getElementById("grab-btn");
+const pluckBtn = document.getElementById("pluck-btn");
+const streamBtn = document.getElementById("stream-btn");
+const wentBtn = document.getElementById("went-btn");
+const rougeBtn = document.getElementById("rouge-btn");
+const pageOneBtn = document.getElementById("pageOneBtn");
 
 //Select inputs
-const howSelect = document.getElementById("how-select");
-const honorSelect = document.getElementById("honor-select");
-const attractSelect = document.getElementById("attract-select");
-const moodSelect = document.getElementById("mood-select");
-const shouldSelect = document.getElementById("should-select");
+const grabSelect = document.getElementById("grab-select");
+const pluckSelect = document.getElementById("pluck-select");
+const streamSelect = document.getElementById("stream-select");
+const wentSelect = document.getElementById("went-select");
+const rougeSelect = document.getElementById("rouge-select");
 
 //Alert Boxes
-const howAlert = document.getElementById("how-alert");
-const honorAlert = document.getElementById("honor-alert");
-const attractAlert = document.getElementById("attract-alert");
-const moodAlert = document.getElementById("mood-alert");
-const shouldAlert = document.getElementById("should-alert");
+const grabAlert = document.getElementById("grab-alert");
+const pluckAlert = document.getElementById("pluck-alert");
+const streamAlert = document.getElementById("stream-alert");
+const wentAlert = document.getElementById("went-alert");
+const rougeAlert = document.getElementById("rouge-alert");
 
 //Functions to check answers
-//how
-function checkhowAnswer(alert, select) {
-  if (select.value == "[ˈhaw]") {
+//Grab
+function checkGrabAnswer(alert, select) {
+  if (select.value == "[ˈgɹæb]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText = "This is corect";
+    allAnswersCorrect();
+  } else if (select.value == "[ˈgræb]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This word does not have a fully articulated [w].";
-  } else if (select.value == "[ˈhau]") {
+      "Incorrect. The English rhotic approximant is represented by turned r.";
+  } else if (select.value == "[ˈgɹaeb]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. The final vowel is not quite so high.";
-  } else if (select.value == "[ˈhaʊ]") {
+    alert.innerText =
+      "Incorrect. In IPA, any sequence of vowels indicates a diphthong.";
+  } else if (select.value == "[ˈkɹæb]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. That is crab not grab.";
+  }
+}
+
+//Pluck
+function checkPluckAnswer(alert, select) {
+  if (select.value == "[ˈpluk]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = 'Incorrect. That transcription gives you "pluke"';
+  } else if (select.value == "[ˈplək]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. In English, schwa doesn't occur in stressed syllables";
+  } else if (select.value == "[ˈplʌk]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈhow]") {
+  } else if (select.value == "[ˈplʌck]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. Don't let English spelling fool you!";
+    alert.innerText = "Incorrect. There is no IPA [c] in English";
   }
 }
 
-//honor
-function checkhonorAnswer(alert, select) {
-  if (select.value == "[ˈhanɹ̩]") {
+//Stream
+function checkStreamAnswer(alert, select) {
+  if (select.value == "[ˈstrim]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. Listen carefully: there is no pronunciation of [h].";
-  } else if (select.value == "[ˈonɹ̩]") {
+      "Incorrect. The English rhotic approximant is represented by turned r.";
+  } else if (select.value == "[stɹim]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The vowel isn't pronounced as [o] as in only.";
-  } else if (select.value == "[ˈanɹ̩]") {
+    alert.innerText = "Incorrect. This transcription lacks a stress mark..";
+  } else if (select.value == "[ˈstɹɪm]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. This word would rhyme with swim.";
+  } else if (select.value == "[ˈstɹim]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
-    alert.innerText = "This is correct";
-    allAnswersCorrect();
-  } else if (select.value == "[ˈanor̩]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. You are right that there is no [h], but check the vowels and the approximant.";
-  }
-}
-
-//attract
-function checkattractAnswer(alert, select) {
-  if (select.value == "[̩aˈtrækt]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. The first vowel is n ot low and central.";
-  } else if (select.value == "[əˈtɹækt]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-danger");
-    alert.classList.add("alert-success");
-    alert.innerText = "This is correct";
-    allAnswersCorrect();
-  } else if (select.value == "[̩ʌˈtrækt]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. [ ʌ ] never occurs in an unstressed syllable.";
-  } else if (select.value == "[̩əˈttræct]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There is no long [t] or [c] in English.";
-  }
-}
-
-//mood
-function checkmoodAnswer(alert, select) {
-  if (select.value == "[ˈmood]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This would have [o] as in mode, but longer.";
-  } else if (select.value == "[ˈmude]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = 'Incorrect. There is no "silent e" in IPA.';
-  } else if (select.value == "[ˈmʌd]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This word is mud.";
-  } else if (select.value == "[ˈmud]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-danger");
-    alert.classList.add("alert-success");
-    alert.innerText = "This is correct";
+    alert.innerText = "This is Correct";
     allAnswersCorrect();
   }
 }
 
-//should
-function checkshouldAnswer(alert, select) {
-  if (select.value == "[ˈʃʊd]") {
+//Went
+function checkWentAnswer(alert, select) {
+  if (select.value == "[ˈwənt]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. This would rhyme with runt.";
+  } else if (select.value == "[ˈwɛnt]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈshʊd]") {
+  } else if (select.value == "[ˈwɪnt]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText =
+      "Correct. This speaker demonstrates a phenomenon called 'nasal raising' where vowels raise before a nasal sound. However, many Americans pronounce this word with the vowel [ɛ]";
+    allAnswersCorrect();
+  } else if (select.value == "[ˈwent]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. This would rhyme with , paint.";
+  }
+}
+
+//Rouge
+function checkRougeAnswer(alert, select) {
+  if (select.value == "[ˈɹuj]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This word does not begin with the sound [s] followed by the sound [h].";
-  } else if (select.value == "[ˈʃood]") {
+      "Incorrect. IPA [j] indicates a palatal approximant written in English as y.";
+  } else if (select.value == "[ˈɹuʒ]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText = "This is correct";
+    allAnswersCorrect();
+  } else if (select.value == "[ˈruʒ]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This would give you showed but with a longer vowel.";
-  } else if (select.value == "[ˈʃʊld]") {
+      "Incorrect. The English rhotic approximant is represented by turned r.";
+  } else if (select.value == "[ˈɹuʒe]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There is no phonetic [l] in this word.";
+    alert.innerText = "Incorrect. There are never silent letters in IPA.";
   }
 }
 
@@ -164,24 +165,24 @@ function checkshouldAnswer(alert, select) {
 
 //All Event Listeners
 //Page 1
-howBtn.addEventListener("click", () => {
-  checkhowAnswer(howAlert, howSelect);
+grabBtn.addEventListener("click", () => {
+  checkGrabAnswer(grabAlert, grabSelect);
 });
 
-honorBtn.addEventListener("click", () => {
-  checkhonorAnswer(honorAlert, honorSelect);
+pluckBtn.addEventListener("click", () => {
+  checkPluckAnswer(pluckAlert, pluckSelect);
 });
 
-attractBtn.addEventListener("click", () => {
-  checkattractAnswer(attractAlert, attractSelect);
+streamBtn.addEventListener("click", () => {
+  checkStreamAnswer(streamAlert, streamSelect);
 });
 
-moodBtn.addEventListener("click", () => {
-  checkmoodAnswer(moodAlert, moodSelect);
+wentBtn.addEventListener("click", () => {
+  checkWentAnswer(wentAlert, wentSelect);
 });
 
-shouldBtn.addEventListener("click", () => {
-  checkshouldAnswer(shouldAlert, shouldSelect);
+rougeBtn.addEventListener("click", () => {
+  checkRougeAnswer(rougeAlert, rougeSelect);
 });
 
 // Page 2
@@ -189,13 +190,13 @@ shouldBtn.addEventListener("click", () => {
 // Utility Function
 function allAnswersCorrect() {
   if (
-    howSelect.value == "[ˈhaʊ]" &&
-    honorSelect.value == "[ˈanɹ̩]" &&
-    attractSelect.value == "[əˈtɹækt]" &&
-    shouldSelect.value == "[ˈʃʊd]" &&
-    moodSelect.value == "[ˈmud]"
+    grabSelect.value == "[ˈgɹæb]" &&
+    pluckSelect.value == "[ˈplʌk]" &&
+    streamSelect.value == "[ˈstɹim]" &&
+    rougeSelect.value == "[ˈɹuʒ]" &&
+    (wentSelect.value == "[ˈwɛnt]" || wentSelect.value == "[ˈwɪnt]")
   ) {
-    pageTwoBtn.classList.remove("d-none");
+    pageOneBtn.classList.remove("d-none");
   }
 }
 
@@ -215,6 +216,6 @@ function allAnswersCorrect() {
 //   },
 //   {
 //     name: "[ˈkɹæb]",
-//     prompt: "Incorrect. That is crab not how.",
+//     prompt: "Incorrect. That is crab not grab.",
 //   },
 // ];

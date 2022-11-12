@@ -1,102 +1,93 @@
 //Get all ids from pages
 
 //Buttons
-const grabBtn = document.getElementById("grab-btn");
-const pluckBtn = document.getElementById("pluck-btn");
-const streamBtn = document.getElementById("stream-btn");
-const wentBtn = document.getElementById("went-btn");
-const rougeBtn = document.getElementById("rouge-btn");
+const blueBtn = document.getElementById("blue-btn");
+const specialBtn = document.getElementById("special-btn");
+const uglyBtn = document.getElementById("ugly-btn");
+const woodBtn = document.getElementById("wood-btn");
+const aethesticBtn = document.getElementById("aethestic-btn");
+const agoBtn = document.getElementById("ago-btn");
+const hereBtn = document.getElementById("here-btn");
+const orderBtn = document.getElementById("order-btn");
+
 const pageOneBtn = document.getElementById("pageOneBtn");
 
 //Select inputs
-const grabSelect = document.getElementById("grab-select");
-const pluckSelect = document.getElementById("pluck-select");
-const streamSelect = document.getElementById("stream-select");
-const wentSelect = document.getElementById("went-select");
-const rougeSelect = document.getElementById("rouge-select");
+const blueSelect = document.getElementById("blue-select");
+const specialSelect = document.getElementById("special-select");
+const uglySelect = document.getElementById("ugly-select");
+const woodSelect = document.getElementById("wood-select");
+const aethesticSelect = document.getElementById("aethestic-select");
+const agoSelect = document.getElementById("ago-select");
+const hereSelect = document.getElementById("here-select");
+const orderSelect = document.getElementById("order-select");
 
 //Alert Boxes
-const grabAlert = document.getElementById("grab-alert");
-const pluckAlert = document.getElementById("pluck-alert");
-const streamAlert = document.getElementById("stream-alert");
-const wentAlert = document.getElementById("went-alert");
-const rougeAlert = document.getElementById("rouge-alert");
+const blueAlert = document.getElementById("blue-alert");
+const specialAlert = document.getElementById("special-alert");
+const uglyAlert = document.getElementById("ugly-alert");
+const woodAlert = document.getElementById("wood-alert");
+const aethesticAlert = document.getElementById("aethestic-alert");
+const agoAlert = document.getElementById("ago-alert");
+const hereAlert = document.getElementById("here-alert");
+const orderAlert = document.getElementById("order-alert");
 
 //Functions to check answers
-//Grab
-function checkGrabAnswer(alert, select) {
-  if (select.value == "[ˈgɹæb]") {
+//blue
+function checkblueAnswer(alert, select) {
+  if (select.value == "[Blu]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is corect";
     allAnswersCorrect();
-  } else if (select.value == "[ˈgræb]") {
+  } else if (select.value == "[Bue]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The English rhotic approximant is represented by turned r.";
-  } else if (select.value == "[ˈgɹaeb]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[Blʊ]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. In IPA, any sequence of vowels indicates a diphthong.";
-  } else if (select.value == "[ˈkɹæb]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. That is crab not grab.";
+    alert.innerText = "Incorrect.";
   }
 }
 
-//Pluck
-function checkPluckAnswer(alert, select) {
-  if (select.value == "[ˈpluk]") {
+//special
+function checkspecialAnswer(alert, select) {
+  if (select.value == "[spəʒl]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = 'Incorrect. That transcription gives you "pluke"';
-  } else if (select.value == "[ˈplək]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[spəʃɛl]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. In English, schwa doesn't occur in stressed syllables";
-  } else if (select.value == "[ˈplʌk]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[ˈspɛʃəl]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈplʌck]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There is no IPA [c] in English";
   }
 }
 
-//Stream
-function checkStreamAnswer(alert, select) {
-  if (select.value == "[ˈstrim]") {
+//ugly
+function checkuglyAnswer(alert, select) {
+  if (select.value == "[ʊgli]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The English rhotic approximant is represented by turned r.";
-  } else if (select.value == "[stɹim]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[ʊglə]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This transcription lacks a stress mark..";
-  } else if (select.value == "[ˈstɹɪm]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This word would rhyme with swim.";
-  } else if (select.value == "[ˈstɹim]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[ˈʌgli]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
@@ -105,59 +96,108 @@ function checkStreamAnswer(alert, select) {
   }
 }
 
-//Went
-function checkWentAnswer(alert, select) {
-  if (select.value == "[ˈwənt]") {
+//wood
+function checkwoodAnswer(alert, select) {
+  if (select.value == "[ˈwud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This would rhyme with runt.";
-  } else if (select.value == "[ˈwɛnt]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[ˈwʊd]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈwɪnt]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-danger");
-    alert.classList.add("alert-success");
-    alert.innerText =
-      "Correct. This speaker demonstrates a phenomenon called 'nasal raising' where vowels raise before a nasal sound. However, many Americans pronounce this word with the vowel [ɛ]";
-    allAnswersCorrect();
-  } else if (select.value == "[ˈwent]") {
+  } else if (select.value == "[woʊd]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. This would rhyme with , paint.";
+    alert.innerText = "Incorrect.";
   }
 }
 
-//Rouge
-function checkRougeAnswer(alert, select) {
-  if (select.value == "[ˈɹuj]") {
+//aethestic
+function checkaethesticAnswer(alert, select) {
+  if (select.value == "[əˈsθɛtɪk]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. IPA [j] indicates a palatal approximant written in English as y.";
-  } else if (select.value == "[ˈɹuʒ]") {
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[iːsˈθɛtɪk]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈruʒ]") {
+  } else if (select.value == "[ɛˈsθɛtɪk]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The English rhotic approximant is represented by turned r.";
-  } else if (select.value == "[ˈɹuʒe]") {
+    alert.innerText = "Incorrect.";
+  }
+}
+
+//ago
+function checkagoAnswer(alert, select) {
+  if (select.value == "[əˈgoʊ]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText = "This is corect";
+    allAnswersCorrect();
+  } else if (select.value == "[əˈgo]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. There are never silent letters in IPA.";
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[ɑgoʊ]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect.";
+  }
+}
+
+//here
+function checkhereAnswer(alert, select) {
+  if (select.value == "[hər]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[hɝr]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[Hir]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText = "This is correct";
+    allAnswersCorrect();
+  }
+}
+
+//order
+function checkorderAnswer(alert, select) {
+  if (select.value == "[ordɝ]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. ";
+  } else if (select.value == "[ɑrder]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect.";
+  } else if (select.value == "[ˈɔrdər]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-danger");
+    alert.classList.add("alert-success");
+    alert.innerText = "This is Correct";
+    allAnswersCorrect();
   }
 }
 
@@ -165,24 +205,36 @@ function checkRougeAnswer(alert, select) {
 
 //All Event Listeners
 //Page 1
-grabBtn.addEventListener("click", () => {
-  checkGrabAnswer(grabAlert, grabSelect);
+blueBtn.addEventListener("click", () => {
+  checkblueAnswer(blueAlert, blueSelect);
 });
 
-pluckBtn.addEventListener("click", () => {
-  checkPluckAnswer(pluckAlert, pluckSelect);
+specialBtn.addEventListener("click", () => {
+  checkspecialAnswer(specialAlert, specialSelect);
 });
 
-streamBtn.addEventListener("click", () => {
-  checkStreamAnswer(streamAlert, streamSelect);
+uglyBtn.addEventListener("click", () => {
+  checkuglyAnswer(uglyAlert, uglySelect);
 });
 
-wentBtn.addEventListener("click", () => {
-  checkWentAnswer(wentAlert, wentSelect);
+woodBtn.addEventListener("click", () => {
+  checkwoodAnswer(woodAlert, woodSelect);
 });
 
-rougeBtn.addEventListener("click", () => {
-  checkRougeAnswer(rougeAlert, rougeSelect);
+aethesticBtn.addEventListener("click", () => {
+  checkaethesticAnswer(aethesticAlert, aethesticSelect);
+});
+
+agoBtn.addEventListener("click", () => {
+  checkagoAnswer(agoAlert, agoSelect);
+});
+
+hereBtn.addEventListener("click", () => {
+  checkhereAnswer(hereAlert, hereSelect);
+});
+
+orderBtn.addEventListener("click", () => {
+  checkorderAnswer(orderAlert, orderSelect);
 });
 
 // Page 2
@@ -190,11 +242,14 @@ rougeBtn.addEventListener("click", () => {
 // Utility Function
 function allAnswersCorrect() {
   if (
-    grabSelect.value == "[ˈgɹæb]" &&
-    pluckSelect.value == "[ˈplʌk]" &&
-    streamSelect.value == "[ˈstɹim]" &&
-    rougeSelect.value == "[ˈɹuʒ]" &&
-    (wentSelect.value == "[ˈwɛnt]" || wentSelect.value == "[ˈwɪnt]")
+    blueSelect.value == "[Blu]" &&
+    specialSelect.value == "[ˈspɛʃəl]" &&
+    uglySelect.value == "[ˈʌgli]" &&
+    woodSelect.value == "[wʊd]" &&
+    aethesticSelect.value == "[iːsˈθɛtɪk]" &&
+    agoSelect.value == "[əˈgoʊ]" &&
+    hereSelect.value == "[Hir]" &&
+    orderSelect.value == "[ˈɔrdər]"
   ) {
     pageOneBtn.classList.remove("d-none");
   }
@@ -216,6 +271,6 @@ function allAnswersCorrect() {
 //   },
 //   {
 //     name: "[ˈkɹæb]",
-//     prompt: "Incorrect. That is crab not grab.",
+//     prompt: "Incorrect. That is crab not blue.",
 //   },
 // ];

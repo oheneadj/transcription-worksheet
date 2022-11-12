@@ -1,167 +1,164 @@
 //Get all ids from pages
 
 //Buttons
-const breathsBtn = document.getElementById("breaths-btn");
-const xrayBtn = document.getElementById("xray-btn");
-const coughedBtn = document.getElementById("coughed-btn");
-const chandalierBtn = document.getElementById("chandalier-btn");
-const throughBtn = document.getElementById("through-btn");
-const pageFourBtn = document.getElementById("pageFourBtn");
+const spikedBtn = document.getElementById("spiked-btn");
+const rottenBtn = document.getElementById("rotten-btn");
+const yawnedBtn = document.getElementById("yawned-btn");
+const phonesBtn = document.getElementById("phones-btn");
+const includeBtn = document.getElementById("include-btn");
+const pageThreeBtn = document.getElementById("pageThreeBtn");
 
 //Select inputs
-const breathsSelect = document.getElementById("breaths-select");
-const xraySelect = document.getElementById("xray-select");
-const coughedSelect = document.getElementById("coughed-select");
-const chandalierSelect = document.getElementById("chandalier-select");
-const throughSelect = document.getElementById("through-select");
+const spikedSelect = document.getElementById("spiked-select");
+const rottenSelect = document.getElementById("rotten-select");
+const yawnedSelect = document.getElementById("yawned-select");
+const phonesSelect = document.getElementById("phones-select");
+const includeSelect = document.getElementById("include-select");
 
 //Alert Boxes
-const breathsAlert = document.getElementById("breaths-alert");
-const xrayAlert = document.getElementById("xray-alert");
-const coughedAlert = document.getElementById("coughed-alert");
-const chandalierAlert = document.getElementById("chandalier-alert");
-const throughAlert = document.getElementById("through-alert");
+const spikedAlert = document.getElementById("spiked-alert");
+const rottenAlert = document.getElementById("rotten-alert");
+const yawnedAlert = document.getElementById("yawned-alert");
+const phonesAlert = document.getElementById("phones-alert");
+const includeAlert = document.getElementById("include-alert");
 
 //Functions to check answers
-
-//breaths
-function checkbreathsAnswer(alert, select) {
-  if (select.value == "[ˈbrɛθs]") {
+//spiked
+function checkspikedAnswer(alert, select) {
+  if (select.value == "[ˈspaɪked]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect.The English rhotic approximant is represented by turned r.";
-  } else if (select.value == "[ˈbɹɛθs]") {
+      "Incorrect. Phonetically, this word does not end in [ed].";
+  } else if (select.value == "[ˈspaikt]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. The diphthong does not end quite so high.";
+  } else if (select.value == "[ˈspikt]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. This would give you speaked.";
+  } else if (select.value == "[ˈspaɪkt]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈbɹeaθs]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The two vowels incorrectly indicate a diphthong.";
-  } else if (select.value == "[ˈbɹɛths]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. This transcription indicates an alveolar stop followed by a glottal fricative.";
   }
 }
 
-//xray
-function checkxrayAnswer(alert, select) {
-  if (select.value == "[ˈɛksɹe]") {
+//rotten
+function checkrottenAnswer(alert, select) {
+  if (select.value == "[ɹatn̩]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. If you listen carefully, you will hear that there is no [t], just glottal stop followed by [n].";
+  } else if (select.value == "[ɹoʔn̩]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. Don't let the spelling get in they way of how you transcribe the vowels.";
+  } else if (select.value == "[ˈɹaʔn̩]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈeksray]") {
+  } else if (select.value == "ɹotten") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The intial and final vowels are wrong, along with the [r].";
-  } else if (select.value == "[ˈɛxre]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. IPA [x] indicates a voiceless velar fricative.";
-  } else if (select.value == "[ˈeksɹe]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. Listen again to the initial vowel.";
+    alert.innerText = "Incorrect. This is orthogrpahic, not phonetic.";
   }
 }
 
-//coughed
-function checkcoughedAnswer(alert, select) {
-  if (select.value == "[ˈkaft]") {
+//yawned
+function checkyawnedAnswer(alert, select) {
+  if (select.value == "[ˈjand]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ˈkafd]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. Check the voicing of the final stop.";
-  } else if (select.value == "[ˈcaft]") {
+  } else if (select.value == "[ˈyand]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. This doesn't represent the voiceless velar stop.";
-  } else if (select.value == "[ˈkafed]") {
+      "Incorrect. Double check how we transcribe the palatal approximant.";
+  } else if (select.value == "[ˈyawnd]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. The final two symbols do not represent the final sound of this word.";
+      "Incorrect. The first letter doesn't represent a palatal glide, and this word does not contain a bilabial approximant.";
+  } else if (select.value == "[ˈjaned]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText = "Incorrect. There is no silent e in IPA.";
   }
 }
 
-//chandalier
-function checkchandalierAnswer(alert, select) {
-  if (select.value == "[ˈʃændəliɹ]") {
+//phones
+function checkphonesAnswer(alert, select) {
+  if (select.value == "[ˈfons]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. Recheck the position of stress.";
-  } else if (select.value == "[ʃændəˈliɹ]") {
+    alert.innerText = "Incorrect. Listen to the voicing of the final sound.";
+  } else if (select.value == "[ˈfonz]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[shændəˈliɹ]") {
+  } else if (select.value == "[ˈphonz]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. IPA [sh] indicates a sequence of an [s] and an [h].";
-  } else if (select.value == "[ʃandəˈliɹ]") {
+      "Incorrect. This word doesn't start with a bilabial stop.";
+  } else if (select.value == "[ˈfonez]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. The first vowel is produced farther to the front.";
+    alert.innerText = "Incorrect. There is no silent e in IPA.";
   }
 }
 
-//through
-function checkthroughAnswer(alert, select) {
-  if (select.value == "[ˈthɹu]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText = "Incorrect. Watch out for English th!";
-  } else if (select.value == "[ˈθru]") {
+//include
+function checkincludeAnswer(alert, select) {
+  if (select.value == "[ɪnˈklud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText =
-      "Incorrect. Don't forget that the English rhotic is transcribed with a turned r.";
-  } else if (select.value == "[ˈθɹew]") {
-    alert.classList.remove("d-none");
-    alert.classList.remove("alert-success");
-    alert.classList.add("alert-danger");
-    alert.innerText =
-      "Incorrect. [ew] does not represent the high back rounded vowel in through. ";
-  } else if (select.value == "[ˈθɹu]") {
+      "Incorrect.The nasal consonant assimilates in place of articulation to the following stop.";
+  } else if (select.value == "[ɪŋˈklud]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
+  } else if (select.value == "[iŋˈklud]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. The first vowel is not pronounced as high and front as [i].";
+  } else if (select.value == "[ɪŋˈclud]") {
+    alert.classList.remove("d-none");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    alert.innerText =
+      "Incorrect. English does not use the sound represented by IPA [c].";
   }
 }
 
@@ -169,24 +166,24 @@ function checkthroughAnswer(alert, select) {
 
 //All Event Listeners
 //Page 1
-breathsBtn.addEventListener("click", () => {
-  checkbreathsAnswer(breathsAlert, breathsSelect);
+spikedBtn.addEventListener("click", () => {
+  checkspikedAnswer(spikedAlert, spikedSelect);
 });
 
-xrayBtn.addEventListener("click", () => {
-  checkxrayAnswer(xrayAlert, xraySelect);
+rottenBtn.addEventListener("click", () => {
+  checkrottenAnswer(rottenAlert, rottenSelect);
 });
 
-coughedBtn.addEventListener("click", () => {
-  checkcoughedAnswer(coughedAlert, coughedSelect);
+yawnedBtn.addEventListener("click", () => {
+  checkyawnedAnswer(yawnedAlert, yawnedSelect);
 });
 
-chandalierBtn.addEventListener("click", () => {
-  checkchandalierAnswer(chandalierAlert, chandalierSelect);
+phonesBtn.addEventListener("click", () => {
+  checkphonesAnswer(phonesAlert, phonesSelect);
 });
 
-throughBtn.addEventListener("click", () => {
-  checkthroughAnswer(throughAlert, throughSelect);
+includeBtn.addEventListener("click", () => {
+  checkincludeAnswer(includeAlert, includeSelect);
 });
 
 // Page 2
@@ -194,13 +191,13 @@ throughBtn.addEventListener("click", () => {
 // Utility Function
 function allAnswersCorrect() {
   if (
-    breathsSelect.value == "[ˈbɹɛθs]" &&
-    xraySelect.value == "[ˈɛksɹe]" &&
-    coughedSelect.value == "[ˈkaft]" &&
-    throughSelect.value == "[ˈθɹu]" &&
-    chandalierSelect.value == "[ʃændəˈliɹ]"
+    spikedSelect.value == "[ˈspaɪkt]" &&
+    rottenSelect.value == "[ˈɹaʔn̩]" &&
+    yawnedSelect.value == "[ˈjand]" &&
+    includeSelect.value == "[ɪŋˈklud]" &&
+    phonesSelect.value == "[ˈfonz]"
   ) {
-    pageFourBtn.classList.remove("d-none");
+    pageThreeBtn.classList.remove("d-none");
   }
 }
 
@@ -220,6 +217,6 @@ function allAnswersCorrect() {
 //   },
 //   {
 //     name: "[ˈkɹæb]",
-//     prompt: "Incorrect. That is crab not breaths.",
+//     prompt: "Incorrect. That is crab not spiked.",
 //   },
 // ];
