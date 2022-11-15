@@ -64,7 +64,7 @@ function checkrottenAnswer(alert, select) {
     alert.classList.add("alert-danger");
     alert.innerText =
       "Incorrect. Don't let the spelling get in they way of how you transcribe the vowels.";
-  } else if (select.value == "[ˈɹaʔn̩]") {
+  } else if (select.value == "[ˈrɑtən]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
@@ -192,7 +192,7 @@ includeBtn.addEventListener("click", () => {
 function allAnswersCorrect() {
   if (
     spikedSelect.value == "[ˈspaɪkt]" &&
-    rottenSelect.value == "[ˈɹaʔn̩]" &&
+    rottenSelect.value == "[ˈrɑtən]" &&
     yawnedSelect.value == "[ˈjand]" &&
     includeSelect.value == "[ɪŋˈklud]" &&
     phonesSelect.value == "[ˈfonz]"

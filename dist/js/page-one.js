@@ -124,13 +124,13 @@ function checkaethesticAnswer(alert, select) {
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText = "Incorrect.";
-  } else if (select.value == "[iːsˈθɛtɪk]") {
+  } else if (select.value == "[ɛˈsθɛtɪk]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     alert.innerText = "This is correct";
     allAnswersCorrect();
-  } else if (select.value == "[ɛˈsθɛtɪk]") {
+  } else if (select.value == "[iːsˈθɛtɪk]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
@@ -246,7 +246,7 @@ function allAnswersCorrect() {
     specialSelect.value == "[ˈspɛʃəl]" &&
     uglySelect.value == "[ˈʌgli]" &&
     woodSelect.value == "[ˈwʊd]" &&
-    aethesticSelect.value == "[iːsˈθɛtɪk]" &&
+    aethesticSelect.value == "[ɛˈsθɛtɪk]" &&
     agoSelect.value == "[əˈgoʊ]" &&
     hereSelect.value == "[Hir]" &&
     orderSelect.value == "[ˈɔrdər]"

@@ -27,7 +27,7 @@ function checkbeautyAnswer(alert, select) {
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
     alert.innerText = "Incorrect. This is booty.";
-  } else if (select.value == "[ˈbjuɾi]") {
+  } else if (select.value == "[ˈbjuti]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
@@ -60,7 +60,7 @@ function checksureAnswer(alert, select) {
     alert.classList.add("alert-danger");
     alert.innerText =
       "Incorrect. Remember, there are no digraphs like sh in IPA.";
-  } else if (select.value == "[ˈʃɹ̩]") {
+  } else if (select.value == "[ʃʊr]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
@@ -94,7 +94,7 @@ function checkcelloAnswer(alert, select) {
     alert.classList.add("alert-danger");
     alert.innerText =
       "Incorrect. English does not have the sound represented by IPA [c]. Also, double check the first vowel.";
-  } else if (select.value == "[ˈtʃɛlo]") {
+  } else if (select.value == "[ˈʧɛloʊ]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");

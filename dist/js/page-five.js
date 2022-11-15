@@ -83,7 +83,7 @@ function checkxrayAnswer(alert, select) {
 
 //coughed
 function checkcoughedAnswer(alert, select) {
-  if (select.value == "[ˈkaft]") {
+  if (select.value == "[kɔft]") {
     alert.classList.remove("d-none");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
@@ -196,7 +196,7 @@ function allAnswersCorrect() {
   if (
     breathsSelect.value == "[ˈbɹɛθs]" &&
     xraySelect.value == "[ˈɛksɹe]" &&
-    coughedSelect.value == "[ˈkaft]" &&
+    coughedSelect.value == "[kɔft]" &&
     throughSelect.value == "[ˈθɹu]" &&
     chandalierSelect.value == "[ʃændəˈliɹ]"
   ) {
